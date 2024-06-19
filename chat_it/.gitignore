@@ -10,6 +10,7 @@
 .svn/
 migrate_working_dir/
 android/app/google-services.json
+lib/firebase_options.dart
 
 
 # IntelliJ related
