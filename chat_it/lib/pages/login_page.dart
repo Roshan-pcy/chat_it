@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 10,
             ),
             Costombutton(
-              onTap: () => logIn,
+              onTap: logIn,
               text: 'Log in',
             ),
             const SizedBox(

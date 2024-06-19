@@ -1,9 +1,14 @@
+import 'package:chat_it/firebase_options.dart';
 import 'package:chat_it/pages/log_or_register.dart';
-import 'package:chat_it/pages/login_page.dart';
 import 'package:chat_it/theme/lightMode.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
