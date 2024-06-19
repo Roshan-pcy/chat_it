@@ -15,10 +15,12 @@ class Costombutton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           color: Theme.of(context).colorScheme.secondary,
         ),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
-        child: Text(
-          text,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+        margin: const EdgeInsets.symmetric(horizontal: 100),
+        child: Center(
+          child: Text(
+            text,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );

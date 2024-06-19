@@ -1,18 +1,19 @@
 import 'package:chat_it/componets/MyTextFiled.dart';
 import 'package:chat_it/componets/costomButton.dart';
+import 'package:chat_it/pages/login_page.dart';
 import 'package:chat_it/pages/registerScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class LoginPage extends StatefulWidget {
+class Registerscreen extends StatefulWidget {
   void Function()? onTap;
-  LoginPage({super.key, required this.onTap});
+  Registerscreen({super.key, required this.onTap});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<Registerscreen> createState() => _RegisterscreenState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterscreenState extends State<Registerscreen> {
   final TextEditingController gmailContrller = TextEditingController();
 
   final TextEditingController passwordContrller = TextEditingController();
@@ -30,14 +31,14 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             Icon(
               color: Theme.of(context).colorScheme.primary,
-              Icons.message_outlined,
+              Icons.app_registration,
               size: 70,
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
-              'Welcome to Chat It',
+              'Register now',
               style: TextStyle(color: Theme.of(context).colorScheme.primary),
             ),
             const SizedBox(
@@ -59,6 +60,14 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 10,
             ),
+            Mytextfiled(
+              controller: passwordContrller,
+              hinttext: 'confirm password',
+              obsecure: true,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             Costombutton(
               onTap: () => logIn,
               text: 'Log in',
@@ -69,11 +78,11 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Not a Memeber ? '),
+                const Text('alredy log in? '),
                 GestureDetector(
                     onTap: widget.onTap,
                     child: Text(
-                      ' Register Now',
+                      '  Log in',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.secondary),
