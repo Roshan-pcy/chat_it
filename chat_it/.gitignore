@@ -9,7 +9,8 @@
 .history
 .svn/
 migrate_working_dir/
-chat_it\android\app\google-services.json
+android/app/google-services.json
+
 
 # IntelliJ related
 *.iml
